@@ -1,6 +1,7 @@
 /* CC */
 .cc {
   background: no-repeat center/cover;
+  background-image:url("../../public/cards/cc-bg-default.svg");
   width: 36rem;
   height: 23rem;
   padding: 2rem;
