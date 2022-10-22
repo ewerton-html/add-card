@@ -1,16 +1,15 @@
-const ccBgColor01 = document.querySelector(".cc-bg svg > g g:nth-child(1) path");
-const ccBgColor02 = document.querySelector(".cc-bg svg > g g:nth-child(2) path");
+const ccBgColor01 = document.querySelector(".cc");
 const ccLogo = document.querySelector(".cc-logo span:nth-child(2) img");
 
 const color = {
-  visa:["#436D99", "#2D57F2"],
-  mastercard:["#C69347", "#DF6F29"],
-  default:["black", "gray"]
+  visa:["url('./public/cc-bg-visa.svg')"],
+  mastercard:["url('./public/cc-bg-mastercard.svg')"],
+  default:["url('./public/cc-bg-default.svg')"]
 }
 
 function setCardType(type){
-  ccBgColor01.setAttribute("fill", color[type][0])
-  ccBgColor02.setAttribute("fill", color[type][1])
+  ccBgColor01.setAttribute("style",`background-image:url('./public/cc-bg-${type}.svg');`)
+  console.log(ccBgColor01)
   ccLogo.setAttribute("src", `./public/cc-${type}.svg`)
 }
 
